@@ -1,8 +1,9 @@
 import random
 print("随机选择人物：1.普通 2.稀有（初始30） 3.传奇（不会减少）")
+peo=['普通','稀有','传奇']
 hero=[10,30,10]
-a=random.randint(1,3)
-print("您的角色是：",a)
+a=random.randint(1,len(peo))
+print("您的角色是：",a,peo[a-1])
 score=hero[a-1]
 while 1:
     num=[random.randint(1,50),random.randint(1,50),random.randint(1,50)]
@@ -11,6 +12,9 @@ while 1:
 #    ch=random.randint(1,3)
     if ch.isdigit():
         ch=int(ch)
+        if ch>3 or ch<1:
+            print("您的输入有误！请输入数字1-3")
+            continue
     else:
         print("您的输入非法！")
         continue
