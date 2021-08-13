@@ -37,7 +37,7 @@ select ename from t_employees where year(hiredate) = 2000;
 	10. 查询所有员工详细信息，用编号升序排序
 select * from employees order by empno asc;
 	11. 查询所有员工详细信息，用工资降序排序，如果工资相同使用入职日期升序排序
-select * from employees order by sal desc hiredate asc;
+select * from employees order by sal desc,hiredate asc;
 	12. 查询每个部门的平均工资
 select deptno,AVG(sal) from employees group by deptno;
 	13. 查询每个部门的雇员数量。
